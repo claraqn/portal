@@ -1,1 +1,1 @@
-# 포털서비스개론 Repository
+# 포털서비스개발방법론 Repository
