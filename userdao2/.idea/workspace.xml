@@ -14,6 +14,7 @@
       <change afterPath="$PROJECT_DIR$/../userdao3/src/main/java/jejunu/User.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../userdao3/src/main/java/jejunu/UserDao.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../userdao3/src/test/java/jejunu/UserDaoTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/kr/ac/jejunu/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kr/ac/jejunu/UserDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/kr/ac/jejunu/UserDaoTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/kr/ac/jejunu/UserDaoTests.java" afterDir="false" />
     </list>
@@ -32,7 +33,12 @@
       <state>
         <projects_view>
           <tree_state>
-            <expand />
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="userdao2" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
             <select />
           </tree_state>
         </projects_view>
@@ -63,7 +69,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="extract.method.default.visibility" value="private" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../portal-test-예습/java-framework-class-workspace/userdao2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="SQL Dialects" />
   </component>
   <component name="RecentsManager">
@@ -93,7 +99,14 @@
       </extension>
       <option name="PACKAGE_NAME" value="kr.ac.jejunu" />
       <option name="MAIN_CLASS_NAME" value="kr.ac.jejunu.UserDaoTests" />
+      <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
+      <envs>
+        <env name="DB_DRIVER" value="com.mysql.cj.jdbc.Driver" />
+        <env name="DB_URL" value="jdbc:mysql://localhost/user_db?serverTimeZone\=Asia/Seoul" />
+        <env name="DB_USERNAME" value="root" />
+        <env name="DB_PASSWORD" value="rootpw" />
+      </envs>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -120,6 +133,12 @@
       <workItem from="1616304035808" duration="17000" />
       <workItem from="1616741541387" duration="1112000" />
       <workItem from="1616742754735" duration="6794000" />
+      <workItem from="1616862549261" duration="158000" />
+      <workItem from="1617033174344" duration="50000" />
+      <workItem from="1617107974334" duration="18000" />
+      <workItem from="1617346515838" duration="589000" />
+      <workItem from="1617347174227" duration="72000" />
+      <workItem from="1617347351934" duration="6644000" />
     </task>
     <servers />
   </component>
