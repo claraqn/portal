@@ -7,8 +7,11 @@
     <list default="true" id="0500cded-7cee-4280-8c53-2db076b18f8f" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/src/main/java/kr/ac/jejunu/ConnectionMaker.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/kr/ac/jejunu/DaoFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/kr/ac/jejunu/FindByIdStatementStrategy.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/kr/ac/jejunu/HallaConnectionMaker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/kr/ac/jejunu/JdbcContext.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/kr/ac/jejunu/JejuConnectionMaker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/kr/ac/jejunu/StatementStrategy.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../userdao3/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../userdao3/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../userdao3/src/main/java/jejunu/User.java" afterDir="false" />
@@ -48,6 +51,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -70,7 +74,10 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="SQL Dialects" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.17" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="File.Encoding" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
@@ -78,17 +85,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="UserDaoTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="userdao2.test" />
       <extension name="coverage">
@@ -139,6 +135,11 @@
       <workItem from="1617346515838" duration="589000" />
       <workItem from="1617347174227" duration="72000" />
       <workItem from="1617347351934" duration="6644000" />
+      <workItem from="1617354802533" duration="177000" />
+      <workItem from="1617386697539" duration="1062000" />
+      <workItem from="1617388835637" duration="744000" />
+      <workItem from="1617951771983" duration="9496000" />
+      <workItem from="1617961693912" duration="77000" />
     </task>
     <servers />
   </component>

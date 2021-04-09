@@ -1,139 +1,89 @@
 package kr.ac.jejunu;
 
-import javax.sql.DataSource;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.support.GeneratedKeyHolder;
+import org.springframework.jdbc.support.KeyHolder;
+
+import java.security.Key;
 import java.sql.*;
 
 public class UserDao {
-    private final DataSource dataSource; // 추상화해주려면 전체 클래스도 추상화
+    private final JdbcTemplate jdbcTemplate;
 
-    public UserDao(DataSource dataSource) {
-
-        this.dataSource = dataSource;
+    public UserDao(JdbcTemplate jdbcTemplate) {
+        this.jdbcTemplate = jdbcTemplate;
     }
 
     public User findById(Integer id) throws SQLException {
-        Connection connection = null;
-        PreparedStatement preparedStatement = null;
-        ResultSet resultSet = null;
-        User user = null;
-        try {
-            //데이터 어딨어? => mysql
-            connection = dataSource.getConnection();
-            preparedStatement = connection.prepareStatement(
-                    "select * from  userinfo where id = ?"
-            );
-            preparedStatement.setInt(1, id);
-            resultSet = preparedStatement.executeQuery();
-            if(resultSet.next()){
+        String sql = "select * from  userinfo where id = ?";
+        Object[] params = new Object[]{id};
+        return jdbcTemplate.query(sql,rs -> {
+            User user = null;
+            if (rs.next()) {
                 user = new User();
-                user.setId(resultSet.getInt("id"));
-                user.setName(resultSet.getString("name"));
-                user.setPassword(resultSet.getString("password"));
+                user.setId(rs.getInt("id"));
+                user.setName(rs.getString("name"));
+                user.setPassword(rs.getString("password"));
             }
-        } finally {
-            try {
-                resultSet.close();
-            } catch (Exception throwables) { //  모든 예외를 받아줘야함
-                throwables.printStackTrace();
-            }
-            try {
-                preparedStatement.close();
-            } catch (Exception throwables) {
-                throwables.printStackTrace();
-            }
-            try {
-                connection.close();
-            } catch (Exception throwables) {
-                throwables.printStackTrace();
-            }
-        }
-        return user;
+            return user;
+        },id);
     }
+
+    //    User jdbcContextForFindById(StatementStrategy statementStrategy) throws SQLException {
+//        return jdbcContext.jdbcContextForFindById(statementStrategy);
+//    }
 
     public void insert(User user) throws SQLException {
-        Connection connection = null;
-        PreparedStatement preparedStatement = null;
-        try {
-            //데이터 어딨어? => mysql
-            connection = dataSource.getConnection();
-            preparedStatement = connection.prepareStatement(
-                    "insert into userinfo (name, password) values (?,?)"
+        //데이터 어딨어? => mysql
+        String sql = "insert into userinfo (name, password) values ( ?, ? )";
+        Object[] params = new Object[]{user.getName(), user.getPassword()};
+        KeyHolder keyHolder = new GeneratedKeyHolder();
+        jdbcTemplate.update(con ->{
+            PreparedStatement preparedStatement = con.prepareStatement(
+
+                    sql
                     , Statement.RETURN_GENERATED_KEYS
             );
-            preparedStatement.setString(1, user.getName());
-            preparedStatement.setString(2, user.getPassword());
-            preparedStatement.executeUpdate();
-            ResultSet resultSet = preparedStatement.getGeneratedKeys();
-            resultSet.next();
-            user.setId(resultSet.getInt(1));
-        } finally {
-            try {
-                preparedStatement.close();
-            } catch (Exception throwables) {
-                throwables.printStackTrace();
+            for (int i = 0; i < params.length; i++) {
+                preparedStatement.setObject(i + 1, params[i]);
             }
-            try {
-                connection.close();
-            } catch (Exception throwables) {
-                throwables.printStackTrace();
-            }
-        }
-
+            return preparedStatement;
+        }, keyHolder);
+        user.setId(keyHolder.getKey().intValue()); // 키 값을 가져오는 것** 이거 하려고 keyHolder 쓰면서 복잡하게 한것
     }
+
+//    void jdbcContextForInsert(User user, StatementStrategy statementStrategy) throws SQLException {
+//        jdbcContext.jdbcContextForInsert(user, statementStrategy);
+//    }
 
 
     public void update(User user) throws SQLException {
-        Connection connection = null;
-        PreparedStatement preparedStatement = null;
-        try {
-            //데이터 어딨어? => mysql
-            connection = dataSource.getConnection();
-            preparedStatement = connection.prepareStatement(
-                    "update userinfo set name = ?, password = ? where id = ?"
-            );
-            preparedStatement.setString(1, user.getName());
-            preparedStatement.setString(2, user.getPassword());
-            preparedStatement.setInt(3, user.getId());
-            preparedStatement.executeUpdate();
-        } finally {
-            try {
-                preparedStatement.close();
-            } catch (Exception throwables) {
-                throwables.printStackTrace();
-            }
-            try {
-                connection.close();
-            } catch (Exception throwables) {
-                throwables.printStackTrace();
-            }
-        }
-
+        String sql = "update userinfo set name = ?, password = ? where id = ?";
+        Object[] params = new Object[]{user.getName(), user.getPassword(), user.getId()};
+        jdbcTemplate.update(sql,params);
     }
 
     public void delete(Integer id) throws SQLException {
-        Connection connection = null;
-        PreparedStatement preparedStatement = null;
-        try {
-            //데이터 어딨어? => mysql
-            connection = dataSource.getConnection();
-            preparedStatement = connection.prepareStatement(
-                    "delete from userinfo where id = ?"
-            );
-            preparedStatement.setInt(1, id);
-            preparedStatement.executeUpdate();
-        } finally {
-            try {
-                preparedStatement.close();
-            } catch (Exception throwables) {
-                throwables.printStackTrace();
-            }
-            try {
-                connection.close();
-            } catch (Exception throwables) {
-                throwables.printStackTrace();
-            }
-        }
+        String sql = "delete from userinfo where id = ?";
+        Object[] params = new Object[]{id};
+        jdbcTemplate.update(sql, params);
     }
+
+    //    void jdbcContextUpdate(StatementStrategy statementStrategy) throws SQLException {
+//        jdbcContext.jdbcContextUpdate(statementStrategy);
+//    }
+
+//    abstract private PreparedStatement makeStatement(Integer id, Connection connection) throws SQLException;
+//        PreparedStatement preparedStatement = null;
+//        preparedStatement = connection.prepareStatement(
+//                "delete from userinfo where id = ?"
+//        );
+//        //UserDaoTests 에서 userDao.delete(user.getId()); 이므로 setInt(1,id)
+//        preparedStatement.setInt(1, id);
+//        return preparedStatement;
+//    }
+
+
 }
 
 
