@@ -1,18 +1,29 @@
 package kr.ac.jejunu;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.jdbc.support.KeyHolder;
+import org.springframework.stereotype.Component;
 
 import java.security.Key;
 import java.sql.*;
 
+@Component
 public class UserDao {
-    private final JdbcTemplate jdbcTemplate;
+//    @Autowired 여기에 이렇게 적어줘도 됨!
+//    public void setJdbcTemplate(JdbcTemplate jdbcTemplate) {
+//        this.jdbcTemplate = jdbcTemplate;
+//    }
 
-    public UserDao(JdbcTemplate jdbcTemplate) {
-        this.jdbcTemplate = jdbcTemplate;
-    }
+    //  사실 Autowired 생략 가능! 안적줘도 됨
+    @Autowired
+    private JdbcTemplate jdbcTemplate;
+
+    // @Autowired 여기에 이렇게 적어줘도 됨!
+//    public UserDao(JdbcTemplate jdbcTemplate) {
+//        this.jdbcTemplate = jdbcTemplate;
+//    }
 
     public User findById(Integer id) throws SQLException {
         String sql = "select * from  userinfo where id = ?";

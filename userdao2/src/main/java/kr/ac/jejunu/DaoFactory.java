@@ -9,9 +9,12 @@ import org.springframework.jdbc.datasource.SimpleDriverDataSource;
 import javax.sql.DataSource;
 import java.sql.Driver;
 
+//Configuration = spring이 관리하는 영역이라고 선언하는 것
 @Configuration
 public class DaoFactory {
 
+    //annotation으로 값을 주입하는 것
+    //이걸 사용하려면 edit configuration에다가 값을 추가해줘야 사용가능
     @Value("${db.driver}")
     private String className;
     @Value("${db.username}")
@@ -21,11 +24,11 @@ public class DaoFactory {
     @Value("${db.url}")
     private String url;
 
-    @Bean
-    public UserDao userDao() throws ClassNotFoundException {
-
-        return new UserDao(jdbcTemplate());
-    }
+//    @Bean
+//    public UserDao userDao() throws ClassNotFoundException {
+//
+//        return new UserDao(jdbcTemplate());
+//    }
 
     @Bean
     public JdbcTemplate jdbcTemplate() throws ClassNotFoundException {

@@ -12,6 +12,7 @@
       <change afterPath="$PROJECT_DIR$/src/main/java/kr/ac/jejunu/JdbcContext.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/kr/ac/jejunu/JejuConnectionMaker.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/kr/ac/jejunu/StatementStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/daoFactory.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../userdao3/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../userdao3/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../userdao3/src/main/java/jejunu/User.java" afterDir="false" />
@@ -53,6 +54,7 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="spring-beans.schema" />
       </list>
     </option>
   </component>
@@ -73,7 +75,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="extract.method.default.visibility" value="private" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../portal-test-예습/java-framework-class-workspace/userdao2" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -85,6 +87,17 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="UserDaoTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="userdao2.test" />
       <extension name="coverage">
@@ -139,7 +152,15 @@
       <workItem from="1617386697539" duration="1062000" />
       <workItem from="1617388835637" duration="744000" />
       <workItem from="1617951771983" duration="9496000" />
-      <workItem from="1617961693912" duration="77000" />
+      <workItem from="1617961693912" duration="264000" />
+      <workItem from="1617972366689" duration="36000" />
+      <workItem from="1618242899748" duration="38000" />
+      <workItem from="1618308991418" duration="124000" />
+      <workItem from="1618335819762" duration="63000" />
+      <workItem from="1618391443889" duration="50000" />
+      <workItem from="1618475883169" duration="20000" />
+      <workItem from="1618493729539" duration="1326000" />
+      <workItem from="1618558042679" duration="4265000" />
     </task>
     <servers />
   </component>
