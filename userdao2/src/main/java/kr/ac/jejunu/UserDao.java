@@ -1,31 +1,24 @@
 package kr.ac.jejunu;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.jdbc.support.KeyHolder;
 import org.springframework.stereotype.Component;
 
-import java.security.Key;
 import java.sql.*;
 
 @Component
+// final 로 지정한 애들에 대해 생성자 만들어주는 것
+// 자동으로 생성자 만들어졌으니 의존성 주입은 자동으로 됨
+// 이거 있으면 의존성 주입 되는 애구나 로 알면 될듯
+@RequiredArgsConstructor
 public class UserDao {
-//    @Autowired 여기에 이렇게 적어줘도 됨!
-//    public void setJdbcTemplate(JdbcTemplate jdbcTemplate) {
-//        this.jdbcTemplate = jdbcTemplate;
-//    }
 
-    //  사실 Autowired 생략 가능! 안적줘도 됨
-    @Autowired
-    private JdbcTemplate jdbcTemplate;
+    private final JdbcTemplate jdbcTemplate;
 
-    // @Autowired 여기에 이렇게 적어줘도 됨!
-//    public UserDao(JdbcTemplate jdbcTemplate) {
-//        this.jdbcTemplate = jdbcTemplate;
-//    }
-
-    public User findById(Integer id) throws SQLException {
+    public User findById(Integer id){
         String sql = "select * from  userinfo where id = ?";
         Object[] params = new Object[]{id};
         return jdbcTemplate.query(sql,rs -> {
@@ -40,11 +33,8 @@ public class UserDao {
         },id);
     }
 
-    //    User jdbcContextForFindById(StatementStrategy statementStrategy) throws SQLException {
-//        return jdbcContext.jdbcContextForFindById(statementStrategy);
-//    }
 
-    public void insert(User user) throws SQLException {
+    public void insert(User user){
         //데이터 어딨어? => mysql
         String sql = "insert into userinfo (name, password) values ( ?, ? )";
         Object[] params = new Object[]{user.getName(), user.getPassword()};
@@ -63,36 +53,20 @@ public class UserDao {
         user.setId(keyHolder.getKey().intValue()); // 키 값을 가져오는 것** 이거 하려고 keyHolder 쓰면서 복잡하게 한것
     }
 
-//    void jdbcContextForInsert(User user, StatementStrategy statementStrategy) throws SQLException {
-//        jdbcContext.jdbcContextForInsert(user, statementStrategy);
-//    }
 
-
-    public void update(User user) throws SQLException {
+    public void update(User user) {
         String sql = "update userinfo set name = ?, password = ? where id = ?";
         Object[] params = new Object[]{user.getName(), user.getPassword(), user.getId()};
         jdbcTemplate.update(sql,params);
     }
 
-    public void delete(Integer id) throws SQLException {
+    public void delete(Integer id){
         String sql = "delete from userinfo where id = ?";
         Object[] params = new Object[]{id};
         jdbcTemplate.update(sql, params);
     }
 
-    //    void jdbcContextUpdate(StatementStrategy statementStrategy) throws SQLException {
-//        jdbcContext.jdbcContextUpdate(statementStrategy);
-//    }
 
-//    abstract private PreparedStatement makeStatement(Integer id, Connection connection) throws SQLException;
-//        PreparedStatement preparedStatement = null;
-//        preparedStatement = connection.prepareStatement(
-//                "delete from userinfo where id = ?"
-//        );
-//        //UserDaoTests 에서 userDao.delete(user.getId()); 이므로 setInt(1,id)
-//        preparedStatement.setInt(1, id);
-//        return preparedStatement;
-//    }
 
 
 }

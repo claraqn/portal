@@ -19,10 +19,7 @@ public class JdbcContext {
             //데이터 어딨어? => mysql
             connection = dataSource.getConnection();
             preparedStatement = statementStrategy.makeStatement(connection);
-//            preparedStatement = connection.prepareStatement(
-//                    "select * from  userinfo where id = ?"
-//            );
-//            preparedStatement.setInt(1, id);
+
             resultSet = preparedStatement.executeQuery();
             if (resultSet.next()) {
                 user = new User();
@@ -57,12 +54,6 @@ public class JdbcContext {
             //데이터 어딨어? => mysql
             connection = dataSource.getConnection();
             preparedStatement = statementStrategy.makeStatement(connection);
-//            preparedStatement = connection.prepareStatement(
-//                    "insert into userinfo (name, password) values (?,?)"
-//                    , Statement.RETURN_GENERATED_KEYS
-//            );
-//            preparedStatement.setString(1, user.getName());
-//            preparedStatement.setString(2, user.getPassword());
             preparedStatement.executeUpdate();
             ResultSet resultSet = preparedStatement.getGeneratedKeys();
             resultSet.next();

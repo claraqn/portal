@@ -1,24 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="Gradle : org.example : userdao2-1.0-SNAPSHOT.war (exploded)" />
+    </artifacts-to-build>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0500cded-7cee-4280-8c53-2db076b18f8f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/kr/ac/jejunu/ConnectionMaker.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/kr/ac/jejunu/DaoFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/kr/ac/jejunu/FindByIdStatementStrategy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/kr/ac/jejunu/HallaConnectionMaker.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/kr/ac/jejunu/JdbcContext.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/kr/ac/jejunu/JejuConnectionMaker.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/kr/ac/jejunu/StatementStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/kr/ac/jejunu/UserServlet.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/daoFactory.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/wepapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/kr/ac/jejunu/LombokTests.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../userdao3/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../userdao3/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../userdao3/src/main/java/jejunu/User.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../userdao3/src/main/java/jejunu/UserDao.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../userdao3/src/test/java/jejunu/UserDaoTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/kr/ac/jejunu/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kr/ac/jejunu/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/kr/ac/jejunu/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kr/ac/jejunu/UserDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/kr/ac/jejunu/UserDaoTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/kr/ac/jejunu/UserDaoTests.java" afterDir="false" />
     </list>
@@ -53,13 +58,20 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="spring-beans.schema" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectId" id="1pyMt64UYM8038Hq00KKQF8zXd7" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -75,25 +87,30 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="extract.method.default.visibility" value="private" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../portal-test-예습/java-framework-class-workspace/userdao2" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/build/libs/exploded/userdao2-1.0-SNAPSHOT.war/WEB-INF" />
+    <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.17" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="File.Encoding" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="kr.ac.jejunu" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Project\portal-test\java-framework-class-workspace\userdao2\build\libs\exploded\userdao2-1.0-SNAPSHOT.war\WEB-INF" />
+    </key>
   </component>
-  <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.37">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -120,6 +137,118 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Tomcat 9.0.37" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.37" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="OPEN_IN_BROWSER" value="false" />
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="Gradle : org.example : userdao2-1.0-SNAPSHOT.war (exploded)">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="9cd5be99-3ac0-4523-b868-c9068bd22760" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="52573" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Profile">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+        <EnvironmentVariables>
+          <option name="NAME" value="DB_DRIVER" />
+          <option name="VALUE" value="com.mysql.cj.jdbc.Driver" />
+          <option name="IS_PREDEFINED" value="false" />
+        </EnvironmentVariables>
+        <EnvironmentVariables>
+          <option name="NAME" value="DB_URL" />
+          <option name="VALUE" value="jdbc:mysql://localhost/user_db?serverTimeZone=Asia/Seoul" />
+          <option name="IS_PREDEFINED" value="false" />
+        </EnvironmentVariables>
+        <EnvironmentVariables>
+          <option name="NAME" value="DB_USERNAME" />
+          <option name="VALUE" value="root" />
+          <option name="IS_PREDEFINED" value="false" />
+        </EnvironmentVariables>
+        <EnvironmentVariables>
+          <option name="NAME" value="DB_PASSWORD" />
+          <option name="VALUE" value="rootpw" />
+          <option name="IS_PREDEFINED" value="false" />
+        </EnvironmentVariables>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="Gradle : org.example : userdao2-1.0-SNAPSHOT.war (exploded)" />
+        </option>
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="JUnit.UserDaoTests" />
+      <item itemvalue="Tomcat Server.Tomcat 9.0.37" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.UserDaoTests" />
@@ -160,7 +289,12 @@
       <workItem from="1618391443889" duration="50000" />
       <workItem from="1618475883169" duration="20000" />
       <workItem from="1618493729539" duration="1326000" />
-      <workItem from="1618558042679" duration="4265000" />
+      <workItem from="1618558042679" duration="4752000" />
+      <workItem from="1618741444247" duration="60000" />
+      <workItem from="1619439548012" duration="616000" />
+      <workItem from="1619442863292" duration="15000" />
+      <workItem from="1619765729557" duration="7258000" />
+      <workItem from="1619773966700" duration="1487000" />
     </task>
     <servers />
   </component>
