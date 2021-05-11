@@ -7,45 +7,53 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.datasource.SimpleDriverDataSource;
 
 import javax.sql.DataSource;
+import java.io.PrintWriter;
+import java.sql.Connection;
 import java.sql.Driver;
+import java.sql.SQLException;
+import java.sql.SQLFeatureNotSupportedException;
+import java.util.logging.Logger;
 
-//Configuration = spring이 관리하는 영역이라고 선언하는 것
 @Configuration
-public class DaoFactory {
-
-    //annotation으로 값을 주입하는 것
-    //이걸 사용하려면 edit configuration에다가 값을 추가해줘야 사용가능
-    @Value("${db.driver}")
+public class DaoFactory { //DaoFactory=스프링 코어 => 스프링 그 자체
+    //edit configurations 해서 넣은 db 정보를 받아와서 사용하는 부분
+    @Value("${db.classname}")
     private String className;
-    @Value("${db.username}")
-    private String root;
-    @Value("${db.password}")
-    private String rootpw;
     @Value("${db.url}")
     private String url;
+    @Value("${db.username}")
+    private String username;
+    @Value("${db.password}")
+    private String password;
 
+    // 미루고 미뤄진 남들이 갖기 싫은 정보를 DaoFactory가 받는것!
+    // 의존성 주입을 하는곳! (의존성 관리를 전문적으로 하는 곳)
+    // UserDao를 new를 통해 만들고 거기에 맞는 의존성을 userDao 에게 주입을 해줘서 클라이언트에게 던져줌
+    // 이런게 DI 입니다!
+//    @Bean
+//    public UserDao userDao() {
+//
+//        return new UserDao(jdbcContext());
+//    }
 
     @Bean
-    public JdbcTemplate jdbcTemplate() throws ClassNotFoundException {
+    public JdbcTemplate jdbcContext() {
         return new JdbcTemplate(dataSource());
     }
 
+    //DataSource = connection에 관련된 다양한 인터페이스 제공
+    //SimpleDriverDataSource = 심플하게 사용할 수 있는 스프링에서 데이터소스 implementation 하는 클래스
     @Bean
-    public DataSource dataSource() throws ClassNotFoundException {
-        SimpleDriverDataSource dataSource =
-                new SimpleDriverDataSource();
-
-        className = "com.mysql.cj.jdbc.Driver";
-        root = "root";
-        rootpw = "rootpw";
-        url = "jdbc:mysql://localhost/user_db?" + "characterEncoding=utf-8&serverTimezone=UTC";
-        dataSource.setDriverClass((Class<? extends Driver>) Class.forName(className));
-        dataSource.setUsername(root);
-        dataSource.setPassword(rootpw);
+    public DataSource dataSource(){
+        SimpleDriverDataSource dataSource = new SimpleDriverDataSource();
+        try {
+            dataSource.setDriverClass((Class<? extends Driver>) Class.forName(className));
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
         dataSource.setUrl(url);
-
+        dataSource.setUsername(username);
+        dataSource.setPassword(password);
         return dataSource;
     }
-
-
 }

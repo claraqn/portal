@@ -1,43 +1,43 @@
 package kr.ac.jejunu;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.stereotype.Controller;
 
 import javax.servlet.*;
 import java.io.IOException;
 
+@Controller("/userServlet")
 public class UserServlet extends GenericServlet {
-
-    private  UserDao userDao;
-
+    @Autowired
+    private UserDao userDao;
     @Override
     public void destroy() {
-        System.out.println("************* destroy **************");
+        System.out.println("************ destroy ***********");
+        super.destroy();
     }
 
     @Override
     public void init(ServletConfig config) throws ServletException {
-        ApplicationContext applicationContext =
-                new AnnotationConfigApplicationContext("kr.ac.jejunu");
-        userDao = applicationContext.getBean("userDao", UserDao.class);
-        System.out.println("********** init **************");
+        System.out.println("************ init ***********");
+        ApplicationContext applicationContext = new AnnotationConfigApplicationContext("kr.ac.jejunu");
+        this.userDao = applicationContext.getBean("userDao", UserDao.class);
+        super.init(config);
     }
 
     @Override
     public void service(ServletRequest req, ServletResponse res) throws ServletException, IOException {
-
-        System.out.println("*************** service **************");
-//        Integer id = Integer.parseInt(req.getParameter("id"));
+        System.out.println("********* service **********");
         User user = userDao.findById(1);
-        StringBuffer response = new StringBuffer();
-        response.append("<html>");
-        response.append("<body>");
-        response.append("<h1>");
-        response.append(String.format("hello my name is %s", user.getName()));
-        response.append("</h1>");
-        response.append("</body>");
-        response.append("</html>");
+        StringBuffer stringBuffer = new StringBuffer();
+        stringBuffer.append("<html>");
+        stringBuffer.append("<h1>");
+        stringBuffer.append(String.format("hello %s",user.getName()));
+//        stringBuffer.append("hello rinnie hello");
+        stringBuffer.append("</h1>");
+        stringBuffer.append("</html>");
         res.setContentType("text/html;charset=UTF-8");
-        res.getWriter().println(response.toString());
+        res.getWriter().println(stringBuffer.toString());
     }
 }

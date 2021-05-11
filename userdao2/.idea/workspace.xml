@@ -9,24 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0500cded-7cee-4280-8c53-2db076b18f8f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/kr/ac/jejunu/DaoFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/kr/ac/jejunu/JdbcContext.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/kr/ac/jejunu/StatementStrategy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/kr/ac/jejunu/UserServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/daoFactory.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/wepapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/kr/ac/jejunu/LombokTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../userdao3/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../userdao3/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../userdao3/src/main/java/jejunu/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../userdao3/src/main/java/jejunu/UserDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../userdao3/src/test/java/jejunu/UserDaoTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/kr/ac/jejunu/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kr/ac/jejunu/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/kr/ac/jejunu/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kr/ac/jejunu/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/kr/ac/jejunu/UserDaoTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/kr/ac/jejunu/UserDaoTests.java" afterDir="false" />
-    </list>
+    <list default="true" id="0500cded-7cee-4280-8c53-2db076b18f8f" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -40,6 +23,9 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand>
@@ -66,6 +52,14 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
     <option name="FILTER_WARNINGS" value="false" />
@@ -87,33 +81,41 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="extract.method.default.visibility" value="private" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/build/libs/exploded/userdao2-1.0-SNAPSHOT.war/WEB-INF" />
-    <property name="project.structure.last.edited" value="Problems" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../portal-test/java-framework-class-workspace/userdao2" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Lombok Config" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="kr.ac.jejunu" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Project\portal-test\java-framework-class-workspace\userdao2\build\libs\exploded\userdao2-1.0-SNAPSHOT.war\WEB-INF" />
+      <recent name="C:\Project\portal-test-예습\java-framework-class-workspace\userdao2\src\main\webapp\WEB-INF\views" />
     </key>
   </component>
-  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.37">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+  <component name="RunManager" selected="Tomcat Server.tomcat">
+    <configuration name="LombokTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;kr.ac.jejunu.LombokTests&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
     </configuration>
     <configuration name="UserDaoTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="userdao2.test" />
@@ -128,8 +130,8 @@
       <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
       <envs>
-        <env name="DB_DRIVER" value="com.mysql.cj.jdbc.Driver" />
-        <env name="DB_URL" value="jdbc:mysql://localhost/user_db?serverTimeZone\=Asia/Seoul" />
+        <env name="DB_CLASSNAME" value="com.mysql.cj.jdbc.Driver" />
+        <env name="DB_URL" value="jdbc:mysql://localhost/user_db?serverTimeZone=Asia/Seoul" />
         <env name="DB_USERNAME" value="root" />
         <env name="DB_PASSWORD" value="rootpw" />
       </envs>
@@ -137,18 +139,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Tomcat 9.0.37" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.37" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
-      <option name="OPEN_IN_BROWSER" value="false" />
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.37" ALTERNATIVE_JRE_ENABLED="false">
       <option name="UPDATING_POLICY" value="restart-server" />
-      <deployment>
-        <artifact name="Gradle : org.example : userdao2-1.0-SNAPSHOT.war (exploded)">
-          <settings>
-            <option name="CONTEXT_PATH" value="/" />
-          </settings>
-        </artifact>
-      </deployment>
+      <deployment />
       <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="9cd5be99-3ac0-4523-b868-c9068bd22760" />
+        <option name="BASE_DIRECTORY_NAME" value="2bd0e223-372d-4aeb-9ab5-225c943999a7" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -156,7 +151,7 @@
       <predefined_log_file id="Tomcat Host Manager" />
       <predefined_log_file id="Tomcat Localhost Access" />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="52573" />
+        <option name="DEBUG_PORT" value="52686" />
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
@@ -217,8 +212,113 @@
           <option name="VM_PARAMETERS" value="" />
           <option name="PROGRAM_PARAMETERS" value="" />
         </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="tomcat" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.37" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER" value="false" />
+      <option name="UPDATING_POLICY" value="update-resources" />
+      <deployment>
+        <artifact name="Gradle : org.example : userdao2-1.0-SNAPSHOT.war (exploded)">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="bbda3176-2dd1-4f80-9216-d68f44305d51" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="52686" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
         <EnvironmentVariables>
-          <option name="NAME" value="DB_DRIVER" />
+          <option name="NAME" value="DB_CLASSNAME" />
+          <option name="VALUE" value="com.mysql.cj.jdbc.Driver" />
+          <option name="IS_PREDEFINED" value="false" />
+        </EnvironmentVariables>
+        <EnvironmentVariables>
+          <option name="NAME" value="DB_URL" />
+          <option name="VALUE" value="jdbc:mysql://localhost/user_db?serverTimeZone=Asia/Seoul" />
+          <option name="IS_PREDEFINED" value="false" />
+        </EnvironmentVariables>
+        <EnvironmentVariables>
+          <option name="NAME" value="DB_USERNAME" />
+          <option name="VALUE" value="root" />
+          <option name="IS_PREDEFINED" value="false" />
+        </EnvironmentVariables>
+        <EnvironmentVariables>
+          <option name="NAME" value="DB_PASSWORD" />
+          <option name="VALUE" value="rootpw" />
+          <option name="IS_PREDEFINED" value="false" />
+        </EnvironmentVariables>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Profile">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+        <EnvironmentVariables>
+          <option name="NAME" value="DB_CLASSNAME" />
           <option name="VALUE" value="com.mysql.cj.jdbc.Driver" />
           <option name="IS_PREDEFINED" value="false" />
         </EnvironmentVariables>
@@ -246,16 +346,21 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Gradle.LombokTests" />
       <item itemvalue="JUnit.UserDaoTests" />
-      <item itemvalue="Tomcat Server.Tomcat 9.0.37" />
+      <item itemvalue="Tomcat Server.tomcat" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.UserDaoTests" />
+        <item itemvalue="Gradle.LombokTests" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="0500cded-7cee-4280-8c53-2db076b18f8f" name="Default Changelist" comment="" />
@@ -269,32 +374,47 @@
       <workItem from="1616172083223" duration="3366000" />
       <workItem from="1616204788815" duration="1782000" />
       <workItem from="1616304035808" duration="17000" />
-      <workItem from="1616741541387" duration="1112000" />
-      <workItem from="1616742754735" duration="6794000" />
-      <workItem from="1616862549261" duration="158000" />
-      <workItem from="1617033174344" duration="50000" />
-      <workItem from="1617107974334" duration="18000" />
-      <workItem from="1617346515838" duration="589000" />
-      <workItem from="1617347174227" duration="72000" />
-      <workItem from="1617347351934" duration="6644000" />
-      <workItem from="1617354802533" duration="177000" />
-      <workItem from="1617386697539" duration="1062000" />
-      <workItem from="1617388835637" duration="744000" />
-      <workItem from="1617951771983" duration="9496000" />
-      <workItem from="1617961693912" duration="264000" />
-      <workItem from="1617972366689" duration="36000" />
-      <workItem from="1618242899748" duration="38000" />
-      <workItem from="1618308991418" duration="124000" />
-      <workItem from="1618335819762" duration="63000" />
-      <workItem from="1618391443889" duration="50000" />
-      <workItem from="1618475883169" duration="20000" />
-      <workItem from="1618493729539" duration="1326000" />
-      <workItem from="1618558042679" duration="4752000" />
-      <workItem from="1618741444247" duration="60000" />
-      <workItem from="1619439548012" duration="616000" />
-      <workItem from="1619442863292" duration="15000" />
-      <workItem from="1619765729557" duration="7258000" />
-      <workItem from="1619773966700" duration="1487000" />
+      <workItem from="1616426957746" duration="5339000" />
+      <workItem from="1616432328663" duration="31000" />
+      <workItem from="1616570497702" duration="21000" />
+      <workItem from="1616597702472" duration="338000" />
+      <workItem from="1616598061874" duration="521000" />
+      <workItem from="1616603555282" duration="721000" />
+      <workItem from="1616604323732" duration="61000" />
+      <workItem from="1616604603126" duration="53000" />
+      <workItem from="1616654826363" duration="54000" />
+      <workItem from="1616687573932" duration="33000" />
+      <workItem from="1616734809761" duration="620000" />
+      <workItem from="1616741512740" duration="26000" />
+      <workItem from="1616743303805" duration="3314000" />
+      <workItem from="1616833283605" duration="71000" />
+      <workItem from="1616833473507" duration="1838000" />
+      <workItem from="1617107995115" duration="5556000" />
+      <workItem from="1617170465044" duration="59000" />
+      <workItem from="1617346468602" duration="3673000" />
+      <workItem from="1617475151497" duration="73000" />
+      <workItem from="1617632318628" duration="480000" />
+      <workItem from="1617633396915" duration="2684000" />
+      <workItem from="1617694918529" duration="3865000" />
+      <workItem from="1617716162972" duration="1719000" />
+      <workItem from="1617951729056" duration="4603000" />
+      <workItem from="1617961680177" duration="11000" />
+      <workItem from="1618475906597" duration="6335000" />
+      <workItem from="1618559299758" duration="3466000" />
+      <workItem from="1618648450795" duration="51000" />
+      <workItem from="1619443093072" duration="61000" />
+      <workItem from="1619530022307" duration="7300000" />
+      <workItem from="1619537502411" duration="100000" />
+      <workItem from="1619765697806" duration="6557000" />
+      <workItem from="1620217857192" duration="1570000" />
+      <workItem from="1620224914769" duration="31000" />
+      <workItem from="1620394899572" duration="324000" />
+      <workItem from="1620395351815" duration="832000" />
+      <workItem from="1620396431549" duration="539000" />
+      <workItem from="1620397000044" duration="4482000" />
+      <workItem from="1620459511631" duration="59000" />
+      <workItem from="1620659980162" duration="124000" />
+      <workItem from="1620726162541" duration="2520000" />
     </task>
     <servers />
   </component>
