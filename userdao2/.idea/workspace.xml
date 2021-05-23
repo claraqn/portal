@@ -9,7 +9,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0500cded-7cee-4280-8c53-2db076b18f8f" name="Default Changelist" comment="" />
+    <list default="true" id="0500cded-7cee-4280-8c53-2db076b18f8f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/kr/ac/jejunu/UserInterceptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/static/user.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/error.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/upload.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/kr/ac/jejunu/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/kr/ac/jejunu/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/kr/ac/jejunu/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kr/ac/jejunu/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/dispatcher-servlet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -81,7 +90,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="extract.method.default.visibility" value="private" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../portal-test/java-framework-class-workspace/userdao2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../springbootproject/Springboot-boardCRUD" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -92,6 +101,7 @@
       <recent name="kr.ac.jejunu" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Project\portal-test-예습\java-framework-class-workspace\userdao2\src\main\webapp\WEB-INF\static" />
       <recent name="C:\Project\portal-test-예습\java-framework-class-workspace\userdao2\src\main\webapp\WEB-INF\views" />
     </key>
   </component>
@@ -414,7 +424,13 @@
       <workItem from="1620397000044" duration="4482000" />
       <workItem from="1620459511631" duration="59000" />
       <workItem from="1620659980162" duration="124000" />
-      <workItem from="1620726162541" duration="2520000" />
+      <workItem from="1620726162541" duration="2901000" />
+      <workItem from="1620737218587" duration="7090000" />
+      <workItem from="1620751675916" duration="27000" />
+      <workItem from="1620957254963" duration="150000" />
+      <workItem from="1621582410070" duration="298000" />
+      <workItem from="1621582810799" duration="57000" />
+      <workItem from="1621589077338" duration="596000" />
     </task>
     <servers />
   </component>
