@@ -21,6 +21,7 @@ import java.util.Map;
 @RequiredArgsConstructor
 public class UserController {
     private final UserDao userDao;
+
     @RequestMapping(path="/user")
 //    public User getUser(@PathVariable("id") Integer id, HttpServletRequest request, HttpServletResponse response
 //            , HttpSession session){
@@ -52,8 +53,11 @@ public class UserController {
 //    public @ModelAttribute User getUser(@RequestParam("id") Integer id){
 //        return userDao.findById(id);
 //    }
-    public View getUser(@RequestParam("id") Integer id){
-        return new RedirectView(("/upload"));
+//    public View getUser(@RequestParam("id") Integer id){
+//        return new RedirectView(("/upload"));
+//    }
+    public User getUser(@RequestParam("id") Integer id){
+        return userDao.findById(id);
     }
 
     @RequestMapping("/exception")
